@@ -27,6 +27,7 @@ app.set('views', 'views');
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 const authRoutes = require('./routes/auth');
+const flash = require('connect-flash');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -40,7 +41,7 @@ app.use(
 );
 app.use(csrf());
 app.use(csrfProtection);
-
+app.use(flash());
 app.use((req, res, next) => {
   if (!req.session.user) {
     return next();
