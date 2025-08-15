@@ -1,0 +1,14 @@
+mongo atlas:
+-----------
+mongodb+srv://srikishan1804:FUuzwGpEsNhS8Yly@cluster0.xocmgv0.mongodb.net/shop
+
+
+need to run cmd commands:
+------------------------
+npm install --save bcryptjs
+
+npm install --save express-session
+
+npm install --save mongoose
+
+npm install --save connect-mongodb-session
